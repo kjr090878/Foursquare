@@ -25,6 +25,41 @@ class Foursquare: NSObject {
         
     }
     
+    var accessToken: String?
+    
+    func getAccessTokenWithCode(code: String) {
+        
+        let urlString = "https://foursquare.com/oauth2/access_token?client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&grant_type=authorization_code&redirect_uri=http://venues.jo2.co&code=" + code
+        
+        if let url = NSURL(string: urlString) {
+            
+            let request = NSURLRequest(URL: url)
+            
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: {
+                
+                (data, response, error) -> Void in
+                
+                if let d = data {
+                    
+                    if let json = try? NSJSONSerialization.JSONObjectWithData(d, options: .MutableContainers) as? [String:AnyObject] {
+                        
+                        self.accessToken = json?["access_token"] as? String
+                        print(self.accessToken)
+                        
+                        
+                    }
+                    
+                }
+                
+            })
+            
+            task.resume()
+            
+        }
+        
+        
+    }
+    
     var venues: [Dictionary] = []
     
     func getVenuesWithLocation(location: CLLocation, completion: () -> ()) {
@@ -47,10 +82,10 @@ class Foursquare: NSObject {
                             
                             self.venues = responseInfo["venues"] as? [Dictionary] ?? []
                             
-                            dispatch_async(dispatch_get_main_queue(), { () -> Void in completion()
-                            
-                          
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                 
+                                completion()
+                            
                             })
 //
 //                            print(self.venues)

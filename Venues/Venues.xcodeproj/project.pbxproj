@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2B25DE1BC561A9002AF3F3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B25DD1BC561A9002AF3F3 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3D2B25E01BC5644C002AF3F3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2B25DF1BC5644C002AF3F3 /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3DA6BA671BC46325002C2314 /* VenuesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6BA661BC46325002C2314 /* VenuesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3DA6BA691BC468AA002C2314 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA6BA681BC468AA002C2314 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 		3DF5640A1BC40043008A7C20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF564091BC40043008A7C20 /* AppDelegate.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2B25DD1BC561A9002AF3F3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3D2B25DF1BC5644C002AF3F3 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		3DA6BA661BC46325002C2314 /* VenuesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesTableViewController.swift; sourceTree = "<group>"; };
 		3DA6BA681BC468AA002C2314 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3DF564061BC40043008A7C20 /* Venues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Venues.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +73,8 @@
 				3DA6BA681BC468AA002C2314 /* Constants.swift */,
 				3DF564201BC421BD008A7C20 /* MapViewController.swift */,
 				3DA6BA661BC46325002C2314 /* VenuesTableViewController.swift */,
+				3D2B25DD1BC561A9002AF3F3 /* ProfileViewController.swift */,
+				3D2B25DF1BC5644C002AF3F3 /* WebViewController.swift */,
 			);
 			path = Venues;
 			sourceTree = "<group>";
@@ -144,9 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2B25DE1BC561A9002AF3F3 /* ProfileViewController.swift in Sources */,
 				3DA6BA691BC468AA002C2314 /* Constants.swift in Sources */,
 				3DF5641F1BC4016E008A7C20 /* Foursquare.swift in Sources */,
 				3DF564211BC421BD008A7C20 /* MapViewController.swift in Sources */,
+				3D2B25E01BC5644C002AF3F3 /* WebViewController.swift in Sources */,
 				3DF5640A1BC40043008A7C20 /* AppDelegate.swift in Sources */,
 				3DA6BA671BC46325002C2314 /* VenuesTableViewController.swift in Sources */,
 			);
